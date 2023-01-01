@@ -63,7 +63,7 @@ app.get('/getOutput', (req, res) => {
         .then(()=>{
 
             console.log("output : ",_output)
-            if((JSON.parse(_output)).success==true)
+            if((JSON.parse(_output)).status==200)
                 res.status(200).send({ getOutput: (JSON.parse(_output)).output})
             else
                 res.status(200).send({ getOutput: (JSON.parse(_output)).error})
