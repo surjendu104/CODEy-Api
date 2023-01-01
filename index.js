@@ -33,6 +33,7 @@ app.use(express.json())
 
 var _code,_lang,_input,_output
 app.get('/',(req,res)=>{
+    console.log("this is get normal")
     res.status(200).send("Hello world")
 })
 
@@ -63,7 +64,7 @@ app.get('/getOutput', (req, res) => {
 
             console.log("output : ",_output)
             if((JSON.parse(_output)).success==true)
-                res.status(200).send({ getOutput: (JSON.parse(_output))})
+                res.status(200).send({ getOutput: (JSON.parse(_output)).output})
             else
                 res.status(200).send({ getOutput: (JSON.parse(_output)).error})
         })
