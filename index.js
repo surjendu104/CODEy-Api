@@ -51,7 +51,7 @@ app.get('/getOutput', (req, res) => {
     console.log("data : ", postData)
     var config = {
         method: "post",
-        url: "https://codex-api.herokuapp.com/",
+        url: "https://api.codex.jaagrav.in",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
         },
