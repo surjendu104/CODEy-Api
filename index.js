@@ -71,8 +71,8 @@ app.get('/getOutput', (req, res) => {
                     res.status(200).send({ getOutput: (JSON.parse(_output)).error})
                 }
             }
-            else if((JSON.parse(_output)).status==400){
-                res.status(400).send({ getOutput: (JSON.parse(_output)).error})
+            else {
+                res.send({ getOutput: (JSON.parse(_output)).error})
             }
         })
         .catch((error)=> {
