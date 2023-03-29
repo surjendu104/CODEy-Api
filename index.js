@@ -90,7 +90,7 @@ app.post('/', (req, res) => {
     const { language } = req.body
     const { input } = req.body
     
-    console.log("check : ",req.body)
+    // console.log("check : ",req.body)
     
     _code=code
     _lang=language
@@ -102,11 +102,11 @@ app.post('/', (req, res) => {
             b:_lang,
             c:_input
         })
-        console.log("post : ",dmd)
+        // console.log("post : ",dmd)
         // res.status(200).send(dmd)
     }
     else{
-        console.log("erroe")
+        console.log("error")
         // res.send("error")
     }
 
@@ -117,7 +117,7 @@ app.post('/', (req, res) => {
         language: _lang,
         input: _input
     })
-    console.log("data : ", postData)
+    // console.log("data : ", postData)
     var config = {
         method: "post",
         url: "https://api.codex.jaagrav.in",
