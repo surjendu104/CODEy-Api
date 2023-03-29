@@ -6,6 +6,7 @@ const app = express()
 
 app.use(cors({
     origin:"*",
+    methods:["GET","POST"],
 }))
 // Add headers
 // app.use(function (req, res, next) {
