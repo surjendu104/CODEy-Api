@@ -119,7 +119,7 @@ app.post('/', (req, res) => {
         })
         .then(()=>{
 
-            console.log("output : ",_output)
+            // console.log("output : ",_output)
             if((JSON.parse(_output)).status==200){
                 if((JSON.parse(_output)).error==""){
                     res.status(200).send({ getOutput: (JSON.parse(_output)).output})
