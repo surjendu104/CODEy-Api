@@ -67,7 +67,7 @@ app.get('/getOutput', (req, res) => {
 })
 
 // This will serve all requests
-app.post('/', (req, res) => {
+app.post('/getOutput', (req, res) => {
     // Forme the data for further use from the request from user
     const { code } = req.body
     const { language } = req.body
