@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 
 
 //Don't use this one . It is errorneous
-app.get('/getOutput', (req, res) => {
+app.get('/', (req, res) => {
     var postData = qs.stringify({
         code: _code,
         language: _lang,
