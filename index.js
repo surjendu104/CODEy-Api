@@ -4,10 +4,10 @@ var qs = require("qs");
 const cors = require("cors")
 const app = express()
 
-// app.use(cors({
-//     origin:"*",
-//     methods:["GET","POST"],
-// }))
+app.use(cors({
+    origin:"*",
+    // methods:["GET","POST"],
+}))
 // Add headers
 // app.use(function (req, res, next) {
 //     // Website you wish to allow to connect
@@ -27,7 +27,7 @@ const app = express()
 //     next();
 // });
 
-const allowCors = fn => async (req, res) => {
+/* const allowCors = fn => async (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true)
     res.setHeader('Access-Control-Allow-Origin', '*')
     // another option
@@ -43,7 +43,7 @@ const allowCors = fn => async (req, res) => {
 const handler = (req, res) => {
     const d = new Date()
     res.end(d.toString())
-}
+} */
 
 const port = process.env.PORT || 8383
 
@@ -175,4 +175,3 @@ app.post('/', (req, res) => {
 
 app.listen(port, () => console.log(`Server has started on port ${port}`))
 
-module.exports = allowCors(handler)
