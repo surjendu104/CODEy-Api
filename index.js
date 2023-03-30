@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 
 
 //Don't use this one . It is errorneous
-app.get('/', (req, res) => {
+app.get('/getOutput', (req, res) => {
     var postData = qs.stringify({
         code: _code,
         language: _lang,
@@ -67,7 +67,7 @@ app.get('/', (req, res) => {
 })
 
 // This will serve all requests
-app.post('/getOutput', (req, res) => {
+app.post('/', (req, res) => {
     // Forme the data for further use from the request from user
     const { code } = req.body
     const { language } = req.body
