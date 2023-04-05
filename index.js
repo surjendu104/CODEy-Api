@@ -132,7 +132,7 @@ app.post('/', (req, res) => {
             }
         })
         .catch((error) => {
-            res.send({getOutput : error.response.data.error})
+            res.send({getOutput : "Please enter a valid language.The languages currently supported are: java, cpp, py, c, js, go, cs."})
         });
 })
 
