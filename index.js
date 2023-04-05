@@ -118,7 +118,6 @@ app.post('/', (req, res) => {
             return _output
         })
         .then(() => {
-
             // console.log("output : ",_output)
             if ((JSON.parse(_output)).status == 200) {
                 if ((JSON.parse(_output)).error == "") {
@@ -133,7 +132,7 @@ app.post('/', (req, res) => {
             }
         })
         .catch((error) => {
-            console.log(error);
+            res.send({getOutput : error.response.data.error})
         });
 })
 
